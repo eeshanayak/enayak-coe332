@@ -36,6 +36,8 @@ generate_animals.py animals.json
 read_animals.py animals.json
 ```
 
+To exit the interactive container, press ctrl+d
+
 If you would like to run the code non-interactively, run the docker run command on the command line without the “-it” flag and include the parameters for where the files will be stored and read from 
 ```
 docker run --rm -v $PWD:/data json-parser:1.0 read_animals.py /data/animals.json
