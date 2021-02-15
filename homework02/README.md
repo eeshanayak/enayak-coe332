@@ -40,6 +40,7 @@ If you would like to run the code non-interactively, run the docker run command 
 docker run --rm -v $PWD:/data eeshanayak/json-parser:1.0 read_animals.py /data/animals.json
 ```
 
+## Unit Tests
 To run the unit tests for these scripts, use a python3 compiler to run the “test_read_animals.py”
 ```
 python3 test_read_animals.py
