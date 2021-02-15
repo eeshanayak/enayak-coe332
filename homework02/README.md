@@ -31,7 +31,8 @@ docker run --rm -it json-parser:1.0 /bin/bash
 ```
 
 Inside the container, you don’t need to specify the interpreter, so you can run 
-```generate_animals.py animals.json
+```
+generate_animals.py animals.json
 read_animals.py animals.json
 ```
 
