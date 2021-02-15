@@ -20,14 +20,14 @@ python3 read_animals.py animals.json
 
 
 ## Dockerfile
-To build the Dockerfile, use the docker build command and tag it with your Docker Hub username and a descriptive name and code version
+To build the Dockerfile, use the docker build command and tag it with a descriptive name and code version
 ```
-docker build -t eeshanayak/json-parser:1.0 .
+docker build -t json-parser:1.0 .
 ```
 
 To run the interactive container, use the docker run command with the container you built, and use the “—rm” flag to remove the container when you exit it and the “-it” flag to attach an interactive container inside the terminal
 ```
-docker run --rm -it eeshanayak/json-parser:1.0 /bin/bash
+docker run --rm -it json-parser:1.0 /bin/bash
 ```
 
 Inside the container, you don’t need to specify the interpreter, so you can run 
@@ -37,7 +37,7 @@ read_animals.py animals.json
 
 If you would like to run the code non-interactively, run the docker run command on the command line without the “-it” flag and include the parameters for where the files will be stored and read from 
 ```
-docker run --rm -v $PWD:/data eeshanayak/json-parser:1.0 read_animals.py /data/animals.json
+docker run --rm -v $PWD:/data json-parser:1.0 read_animals.py /data/animals.json
 ```
 
 ## Unit Tests
