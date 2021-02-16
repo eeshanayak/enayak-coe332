@@ -2,6 +2,17 @@
 
 The read_animals.py script breeds 2 randomly generated animals as parents into a child by combining their traits.
 
+## Download Script
+Download the script by using git clone command with the repository
+```
+git clone https://github.com/eeshanayak/enayak-coe332
+```
+Then navigate to the homework02 folder
+```
+cd enayak-coe332
+cd homework02
+```
+
 ## Generate Animals
 The generate_animals.py script generates a dictionary with the key “animals” and a value of a list of dictionaries, each dictionary representing an animal with a randomly generated “head” from a set of choices, randomly generated “body” from the pentname library, and random number of “arms” and “legs” which add up to the “tail”. The dictionary is dumped into a json file specified by the user. 
 
