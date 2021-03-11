@@ -1,144 +1,144 @@
 {
   "animals": [
     {
-      "head": "bull",
-      "body": "amoeba-man",
-      "arms": 2,
-      "legs": 9,
-      "tail": 11
-    },
-    {
       "head": "raven",
-      "body": "husky-dane",
-      "arms": 8,
-      "legs": 12,
-      "tail": 20
+      "body": "mouse-python",
+      "arms": 6,
+      "legs": 6,
+      "tail": 12
     },
     {
-      "head": "lion",
-      "body": "pug-mutt",
-      "arms": 10,
+      "head": "bunny",
+      "body": "calf-baboon",
+      "arms": 2,
       "legs": 12,
-      "tail": 22
+      "tail": 14
     },
     {
       "head": "bull",
-      "body": "tick-earwig",
-      "arms": 4,
-      "legs": 12,
-      "tail": 16
-    },
-    {
-      "head": "bunny",
-      "body": "lynx-joey",
-      "arms": 6,
-      "legs": 12,
-      "tail": 18
-    },
-    {
-      "head": "bunny",
-      "body": "ant-gnat",
-      "arms": 4,
-      "legs": 6,
-      "tail": 10
-    },
-    {
-      "head": "lion",
-      "body": "bat-gar",
-      "arms": 4,
-      "legs": 6,
-      "tail": 10
-    },
-    {
-      "head": "snake",
-      "body": "bee-donkey",
+      "body": "squid-wahoo",
       "arms": 2,
       "legs": 3,
       "tail": 5
     },
     {
-      "head": "bull",
-      "body": "rabbit-gnat",
-      "arms": 10,
-      "legs": 3,
-      "tail": 13
-    },
-    {
       "head": "lion",
-      "body": "thrush-crow",
-      "arms": 2,
+      "body": "skink-drum",
+      "arms": 8,
       "legs": 9,
-      "tail": 11
+      "tail": 17
     },
     {
       "head": "bull",
-      "body": "llama-prawn",
-      "arms": 10,
-      "legs": 3,
-      "tail": 13
+      "body": "jay-wren",
+      "arms": 4,
+      "legs": 12,
+      "tail": 16
     },
     {
       "head": "raven",
-      "body": "moray-krill",
-      "arms": 4,
-      "legs": 6,
-      "tail": 10
-    },
-    {
-      "head": "lion",
-      "body": "ocelot-calf",
+      "body": "jennet-ghoul",
       "arms": 10,
-      "legs": 3,
-      "tail": 13
-    },
-    {
-      "head": "bunny",
-      "body": "dodo-ibex",
-      "arms": 4,
-      "legs": 6,
-      "tail": 10
+      "legs": 9,
+      "tail": 19
     },
     {
       "head": "lion",
-      "body": "beetle-bedbug",
+      "body": "boxer-tetra",
       "arms": 8,
       "legs": 3,
       "tail": 11
     },
     {
-      "head": "bull",
-      "body": "alpaca-python",
+      "head": "raven",
+      "body": "mutt-cat",
       "arms": 6,
       "legs": 3,
       "tail": 9
     },
     {
+      "head": "lion",
+      "body": "marten-minnow",
+      "arms": 4,
+      "legs": 6,
+      "tail": 10
+    },
+    {
+      "head": "bull",
+      "body": "piglet-perch",
+      "arms": 8,
+      "legs": 12,
+      "tail": 20
+    },
+    {
       "head": "snake",
-      "body": "gnat-wahoo",
+      "body": "pony-snail",
+      "arms": 8,
+      "legs": 3,
+      "tail": 11
+    },
+    {
+      "head": "lion",
+      "body": "feline-rhino",
+      "arms": 8,
+      "legs": 12,
+      "tail": 20
+    },
+    {
+      "head": "raven",
+      "body": "dog-hippo",
+      "arms": 10,
+      "legs": 9,
+      "tail": 19
+    },
+    {
+      "head": "bunny",
+      "body": "snipe-mayfly",
       "arms": 6,
       "legs": 9,
       "tail": 15
     },
     {
-      "head": "bunny",
-      "body": "rat-dane",
-      "arms": 4,
-      "legs": 9,
+      "head": "lion",
+      "body": "oryx-wasp",
+      "arms": 10,
+      "legs": 3,
       "tail": 13
     },
     {
       "head": "lion",
-      "body": "salmon-turtle",
+      "body": "cub-pug",
+      "arms": 2,
+      "legs": 9,
+      "tail": 11
+    },
+    {
+      "head": "lion",
+      "body": "roughy-bass",
       "arms": 10,
       "legs": 12,
       "tail": 22
     },
     {
-      "head": "raven",
-      "body": "fox-pup",
-      "arms": 4,
+      "head": "bunny",
+      "body": "mutt-gannet",
+      "arms": 10,
       "legs": 12,
+      "tail": 22
+    },
+    {
+      "head": "bunny",
+      "body": "bass-swan",
+      "arms": 10,
+      "legs": 6,
       "tail": 16
+    },
+    {
+      "head": "snake",
+      "body": "squid-magpie",
+      "arms": 6,
+      "legs": 6,
+      "tail": 12
     }
   ]
 }
