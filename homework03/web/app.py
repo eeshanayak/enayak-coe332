@@ -23,7 +23,7 @@ def get_bunny():
     response['output'] = result
     return response  
 
-@app.route('/animals/legs/9', methods=['GET'])
+@app.route('/animals/legs/6', methods=['GET'])
 def get_legs_6():
     result = [x for x in jsonList if x['legs'] == 6]
     response = {}
