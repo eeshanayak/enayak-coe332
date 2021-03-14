@@ -33,7 +33,8 @@ python3 read_animals.py animals.json
 To build the Dockerfile, use the docker build command and tag it with your Docker Hub username and a descriptive name and code version
 ```
 docker build -t eeshanayak/json-parser:1.0 .
-=======
+```
+
 To build the Dockerfile, use the docker build command and tag it with a descriptive name and code version
 ```
 docker build -t json-parser:1.0 .
