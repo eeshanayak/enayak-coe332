@@ -16,7 +16,7 @@ def get_data():
 # test = get_data()
 # jsonList = test['animals']
 
-@app.py('/update', methods=['GET'])
+@app.route('/update', methods=['GET'])
 def update():
     uuid = request.args.get('uuid')
     animals = get_data()
@@ -41,9 +41,9 @@ def update():
             if head is not None:
                 x['tails'] = tails
     
-     rd.set('animals', json.dumps(animals_list))
+    rd.set('animals', json.dumps(animals_list))
 
-@app.py('/generate', methods=['GET'])
+@app.route('/generate', methods=['GET'])
 def generate():
     animal_dict = {}
     animal_dict['animals'] = []
@@ -98,7 +98,7 @@ def get_total():
 
     return str(total_animals)
 
-@app.route('dates', methods=['GET'])
+@app.route('/dates', methods=['GET'])
 def query_dates():
     start = request.args.get('start')
     end = request.args.get('end')
@@ -130,7 +130,7 @@ def delete():
     animals_list = animals['animals']
 
     for x in animals_list:
-        if(x['created_on'] < startdate or x['created_on'] > enddate)
+        if(x['created_on'] < startdate or x['created_on'] > enddate):
             animals_list.remove(x)
 
     rd.set('animals', json.dumps(animals_list))
