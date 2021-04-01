@@ -3,8 +3,16 @@ version: '3'
 services:
     redis:
         image: redis:latest
+        container_name: eesha-redis
         ports:
             - 6401:6379
         volumes:
             - ./config/redis.conf:/redis.conf
         command: [ "redis-server", "/redis.conf" ]
+    web:
+        build: .
+        container_name: eesha_n-web
+        ports:
+           - 5021:5000
+        volumes:
+           - ./data/data_file.json:/datafile.json

@@ -2,7 +2,13 @@ import json
 import datetime
 from flask import Flask, request
 import redis
+import random
+import petname
+import datetime
+import uuid
 
+
+rd = redis.StrictRedis(host='redis', port=6379, db=0)
 app = Flask(__name__)
 
 def get_data():
@@ -11,6 +17,10 @@ def get_data():
  
     userdata = json.loads(rd.get('animals').decode('utf-8'))
     return userdata
+
+@app.route('/helloworld', methods = ['GET'])
+def hello_world():
+    return 'hello world'
 
 
 # test = get_data()
@@ -138,4 +148,4 @@ def delete():
 
 if __name__ == '__main__':
     rd = redis.StrictRedis(host='redis', port=6379, db=0)
-    app.run(debug=True, host='0.0.0.0', port=5021)
+    app.run(debug=True, host='0.0.0.0', port=5000)
