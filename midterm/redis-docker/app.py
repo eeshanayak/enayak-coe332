@@ -12,9 +12,6 @@ rd = redis.StrictRedis(host='redis', port=6379, db=0)
 app = Flask(__name__)
 
 def get_data():
-    #with open("animals.json", "r") as json_file:
-     #   userdata = json.load(json_file)
- 
     userdata = json.loads(rd.get('animals').decode('utf-8'))
     return userdata
 
@@ -22,15 +19,10 @@ def get_data():
 def hello_world():
     return 'hello world'
 
-
-# test = get_data()
-# jsonList = test['animals']
-
 @app.route('/update', methods=['GET'])
 def update():
     uuid = request.args.get('uuid')
     animals = get_data()
-    animals_list = animals['animals']
 
     head = request.args.get('head')
     body = request.args.get('body')
@@ -38,8 +30,8 @@ def update():
     legs = request.args.get('legs')
     tails = request.args.get('tails')
 
-    for x in animals_list:
-        if(x['uuid'] == uuid):
+    for x in animals['animals']:
+        if(x['uuid'] == uuid):          
             if head is not None:
                 x['head'] = head
             if body is not None:
@@ -51,7 +43,10 @@ def update():
             if head is not None:
                 x['tails'] = tails
     
-    rd.set('animals', json.dumps(animals_list))
+
+    rd.set('animals', json.dumps(animals))
+    return str(uuid + 'has been updated')
+
 
 @app.route('/generate', methods=['GET'])
 def generate():
@@ -70,7 +65,7 @@ def generate():
  
         animal_dict['animals'].append(this_animal)
   
-    rd.set('animals', json.dumps(animal_dict, indent=2))
+    rd.set('animals', json.dumps(animal_dict))
 
     return '20 animals have been generated'
 
@@ -82,24 +77,22 @@ def get_animals():
 def get_uuid():
     uuid = request.args.get('uuid')
     animals = get_data()
-    animals_list = animals['animals']
-
-    for x in animals_list:
+   
+    for x in animals['animals']:
        if(x['uuid'] == uuid):
-           return x 
+           return x
 
     return 'No animals with given uuid'
 
 @app.route('/avg_legs', methods=['GET'])
 def get_avg_legs():
-    animals = get_data()
-    animals_list = animals['animals']
+    animals = get_data()    
 
     legs = 0
-    for x in animals_list:
+    for x in animals['animals']:
         legs += x['legs']
 
-    return str(legs / len(animals_list))
+    return str(legs / len(animals['animals']))
 
 @app.route('/total_count', methods=['GET'])
 def get_total():   
@@ -113,19 +106,20 @@ def query_dates():
     start = request.args.get('start')
     end = request.args.get('end')
 
-    startdate = datetime.datetime.strptime(start, "'%Y-%m-%d_%H:%M:%S.%f'")
-    enddate = datetime.datetime.strptime(end, "'%Y-%m-%d_%H:%M:%S.%f'")
+    startdate = datetime.datetime.strptime(start, '%Y-%m-%d_%H:%M:%S.%f')
+    enddate = datetime.datetime.strptime(end, '%Y-%m-%d_%H:%M:%S.%f')
 
     animals = get_data()
-    animals_list = animals['animals']
- 
-    animal_dates = []
+   
+    date_query = []
 
-    for x in animals_list:
-        if(x['created_on'] > startdate and x['created_on'] < enddate):
-            animals_list.append(x)
+    for x in animals['animals']:
+        created_on = datetime.datetime.strptime(x['created_on'], '%Y-%m-%d %H:%M:%S.%f')
 
-    return animals_list
+        if(created_on > startdate and created_on < enddate):
+            date_query.append(x)
+
+    return str(date_query)
 
 
 @app.route('/delete', methods=['GET'])
@@ -133,17 +127,26 @@ def delete():
     start = request.args.get('start')
     end = request.args.get('end')
     
-    startdate = datetime.datetime.strptime(start, "'%Y-%m-%d_%H:%M:%S.%f'")
-    enddate = datetime.datetime.strptime(end, "'%Y-%m-%d_%H:%M:%S.%f'")
+    startdate = datetime.datetime.strptime(start, '%Y-%m-%d_%H:%M:%S.%f')
+    enddate = datetime.datetime.strptime(end, '%Y-%m-%d_%H:%M:%S.%f')
 
     animals = get_data()
-    animals_list = animals['animals']
+   
+    for x in animals['animals']:
+        created_on = datetime.datetime.strptime(x['created_on'], '%Y-%m-%d %H:%M:%S.%f')
+        if(created_on > startdate or created_on < enddate):
+            animals['animals'].remove(x)
 
-    for x in animals_list:
-        if(x['created_on'] < startdate or x['created_on'] > enddate):
-            animals_list.remove(x)
+    rd.set('animals', json.dumps(animals))
 
-    rd.set('animals', json.dumps(animals_list))
+    return 'Animals created between ' + start + ' and ' + end + ' have been deleted'
+
+
+@app.route('/reset', methods=['GET'])
+def reset():
+    rd.flushall()
+
+    return 'Database is reset'
 
 
 if __name__ == '__main__':
