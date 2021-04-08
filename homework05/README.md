@@ -80,5 +80,5 @@ kubectl logs homework05c-7859fd9656-m2hn2
 ```
 Hello, (Eesha) from (10.244.6.164)
 ```
-Yes the IP Address matches part 2.
+Yes, the IP Address matches part 2.
 
