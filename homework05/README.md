@@ -22,6 +22,7 @@ $kubectl logs homework05a
 ```
 Hello, 
 ```
+This is what I expected because the name variable has no value
 
 4. Delete Pod
 ```
@@ -37,7 +38,7 @@ pod "homework05" deleted
 $kubectl apply -f pod-b.yml
 ```
 
-2. Get Pod
+2. Check Logs
 ```
 $kubectl logs homework05b
 ```
