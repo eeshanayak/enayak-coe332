@@ -29,7 +29,7 @@ This is what I expected because the name variable has no value right now.
 $kubectl delete pods homework05a
 ```
 ```
-pod "homework05" deleted
+pod "homework05a" deleted
 ```
 
 ## Part B
@@ -49,6 +49,9 @@ Hello, Eesha
 3. Delete Pod
 ```
 $kubectl delete pods homework05b
+```
+```
+pod "homework05b" deleted
 ```
 
 ## Part C
