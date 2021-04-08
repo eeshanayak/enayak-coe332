@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: homework05
+  name: homework05a
   labels:
     greeting: personalized
 spec:

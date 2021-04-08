@@ -1,9 +1,9 @@
 # Homework 5
 
 ## Part A
-1. Command:
+1. Create Pod:
 ```
-command: ['sh', '-c', 'echo "Hello, $(NAME)" && sleep 3600']
+$kubectl apply -f pod-a.yml
 ```
 
 2. Get Pod:
@@ -17,7 +17,7 @@ homework05   1/1     Running   0          10m
 
 3. Check Logs:
 ```
-$kubectl logs homework05
+$kubectl logs homework05a
 ```
 ```
 Hello, 
@@ -25,8 +25,27 @@ Hello,
 
 4. Delete Pod
 ```
-$kubectl delete pods homework05
+$kubectl delete pods homework05a
 ```
 ```
 pod "homework05" deleted
+```
+
+## Part B
+1. Create Pod
+```
+$kubectl apply -f pod-b.yml
+```
+
+2. Get Pod
+```
+$kubectl logs homework05b
+```
+```
+Hello, Eesha
+```
+
+3. Delete Pod
+```
+$kubectl delete pods homework05b
 ```

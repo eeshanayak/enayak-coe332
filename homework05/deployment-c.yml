@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: homework05c
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      greeting: personalized
+  template:
+    metadata:
+      labels:
+        greeting: personalized
+    spec:
+      containers:
+        - name: hellos
+          image: ubuntu:18.04i
+          env:
+          - name: NAME
+            value: 'Eesha'
+          - name: POD_IP
+            valueFrom: 
+              fieldRef:
+                fieldPath: status.podIP
+          command: ['sh', '-c', 'echo "Hello, ($NAME) from ($POD_IP)" && sleep 3600']
