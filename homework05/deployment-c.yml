@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: homework05c
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       greeting: personalized
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: hellos
-          image: ubuntu:18.04i
+          image: ubuntu:18.04
           env:
           - name: NAME
             value: 'Eesha'
