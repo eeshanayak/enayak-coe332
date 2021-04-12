@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: enayak-test-redis-service
+  labels:
+    username: enayak
+    env: test
+spec:
+  type: ClusterIP
+  selector:
+    app: enayak-test-redis
+  ports:
+  - name: helloredis
+    port: 6379
+    targetPort: 6379
