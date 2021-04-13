@@ -21,7 +21,7 @@ spec:
       containers:
         - name: helloflask
           imagePullPolicy: Always
-          image: eeshanayak/flask-image
+          image: eeshanayak/flask-animals
           env:
           - name: FLASK_APP
             value: "app.py"
