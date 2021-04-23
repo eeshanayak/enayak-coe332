@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eesha-hw7-flask-deployment
+  labels:
+    app: enayak-hw7-flask
+    username: enayak
+    env: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: enayak-hw7-flask
+  template:
+    metadata:
+      labels:
+        app: enayak-hw7-flask
+        username: enayak
+        env: test
+    spec:
+      containers:
+        - name: helloflask
+          imagePullPolicy: Always
+          image: eeshanayak/homework07:latest
+          command: ["python", "api.py"]
+          env:
+          - name: FLASK_APP
+            value: "api.py"
+          ports:
+          - name: http
+            containerPort: 5000
