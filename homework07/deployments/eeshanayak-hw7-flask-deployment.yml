@@ -19,10 +19,11 @@ spec:
         env: test
     spec:
       containers:
-        - name: helloflask
+        - name: enayak-hw7-flask
           imagePullPolicy: Always
           image: eeshanayak/homework07:latest
           command: ["python", "api.py"]
+          #command: ['sleep', '999999']
           env:
           - name: FLASK_APP
             value: "api.py"

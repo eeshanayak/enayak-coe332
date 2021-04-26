@@ -22,5 +22,9 @@ spec:
           image: eeshanayak/homework07:latest 
           command: ['python', 'worker.py']
           env:
+          - name: WORKER_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
           - name: REDIS_IP
             value: 10.106.219.157 

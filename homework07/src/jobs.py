@@ -37,15 +37,15 @@ def add_job(start, end, status="submitted"):
     jid = _generate_jid()
     job_dict = _instantiate_job(jid, status, start, end)
     # update call to save_job:
-    save_job(_generate_job_key(jid), job_dict)
+    _save_job(_generate_job_key(jid), job_dict)
     # update call to queue_job:
-    queue_job(jid)
+    _queue_job(jid)
     return job_dict
 
 
 def update_job_status(jid, status):
     """Update the status of job with job id `jid` to status `status`."""
-    jid, status, start, end = rd.hmget(generate_job_key(jid), 'id', 'status', 'start', 'end')
+    jid, status, start, end = rd.hmget(_generate_job_key(jid), 'id', 'status', 'start', 'end')
     job = _instantiate_job(jid, status, start, end)
     if job:
         job['status'] = status
