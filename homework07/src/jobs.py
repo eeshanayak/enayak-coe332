@@ -54,7 +54,7 @@ def update_job_status(jid, new_status):
     if(new_status == 'in progress'):
         worker_IP = os.environ.get('WORKER_IP')
         print(worker_IP)
-        rd.hset(_generate_job_key(jid), 'worker', 'worker_IP')
+        rd.hset(_generate_job_key(jid), 'worker', worker_IP)
 
     if job:
         job['status'] = new_status
