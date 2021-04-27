@@ -51,8 +51,9 @@ def update_job_status(jid, new_status):
     jid, status, start, end = rd.hmget(_generate_job_key(jid), 'id', 'status', 'start', 'end')
     job = _instantiate_job(jid, status, start, end)
    
-    if(status == 'in progress'):
+    if(new_status == 'in progress'):
         worker_IP = os.environ.get('WORKER_IP')
+        print(worker_IP)
         rd.hset(_generate_job_key(jid), 'worker', 'worker_IP')
 
     if job:
