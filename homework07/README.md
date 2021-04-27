@@ -12,4 +12,8 @@ and the output was
 indicating the job was submitted.
 
 ## Part B
-Currently, the jobs are being submitted and executed, I am not trying to assign the worker to them.
+The jobs are getting executed and the status is getting updated which can be seen in the python debug deployment shell
+```
+>>> rd.hgetall('job.2342ffc8-0f44-47c4-a445-ebd423f1ccf4')
+{b'id': b'2342ffc8-0f44-47c4-a445-ebd423f1ccf4', b'status': b'complete', b'start': b'START', b'end': b'END'}
+```
