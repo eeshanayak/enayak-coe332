@@ -1,6 +1,7 @@
 import uuid
 from hotqueue import HotQueue
 import redis
+import os
 
 q = HotQueue("queue", host='10.106.219.157', port=6379, db=1)
 rd = redis.StrictRedis(host='10.106.219.157', port=6379, db=0)
@@ -9,6 +10,8 @@ def _generate_jid():
     return str(uuid.uuid4())
 
 def _generate_job_key(jid):
+    if type(jid) == bytes:
+        jid = jid.decode('utf-8')
     return 'job.{}'.format(jid)
 
 def _instantiate_job(jid, status, start, end):
@@ -47,6 +50,11 @@ def update_job_status(jid, status):
     """Update the status of job with job id `jid` to status `status`."""
     jid, status, start, end = rd.hmget(_generate_job_key(jid), 'id', 'status', 'start', 'end')
     job = _instantiate_job(jid, status, start, end)
+   
+    if(status == 'in progress'):
+        worker_IP = os.environ.get('WORKER_IP')
+        rd.hset(_generate_job_key(jid), 'worker', 'worker_IP')
+
     if job:
         job['status'] = status
         _save_job(_generate_job_key(jid), job)
