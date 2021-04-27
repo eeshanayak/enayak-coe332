@@ -10,3 +10,6 @@ and the output was
 {"id": "632155f5-02a3-4c68-97a0-78616c112cfc", "status": "submitted", "start": "START", "end": "END"}
 ```
 indicating the job was submitted.
+
+## Part B
+Currently, the jobs are being submitted and executed, I am not trying to assign the worker to them.

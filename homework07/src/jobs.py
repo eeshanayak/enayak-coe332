@@ -46,7 +46,7 @@ def add_job(start, end, status="submitted"):
     return job_dict
 
 
-def update_job_status(jid, status):
+def update_job_status(jid, new_status):
     """Update the status of job with job id `jid` to status `status`."""
     jid, status, start, end = rd.hmget(_generate_job_key(jid), 'id', 'status', 'start', 'end')
     job = _instantiate_job(jid, status, start, end)
@@ -56,7 +56,7 @@ def update_job_status(jid, status):
         rd.hset(_generate_job_key(jid), 'worker', 'worker_IP')
 
     if job:
-        job['status'] = status
-        _save_job(_generate_job_key(jid), job)
+        job['status'] = new_status
+        _save_job(_generate_job_key(job['id']), job)
     else:
         raise Exception()
