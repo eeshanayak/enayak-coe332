@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: enayak-final-worker
+  labels:
+    app: enayak-final-worker
+    username: eeshanayak
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: enayak-final-worker
+  template:
+    metadata:
+      labels:
+        app: enayak-final-worker
+        username: eeshanayak
+    spec:
+      containers:
+        - name: enayak-final-worker
+          imagePullPolicy: Always
+          image: eeshanayak/final:latest 
+          command: ['python', 'worker.py']
+          env:
+          - name: WORKER_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
+          - name: REDIS_IP
+            value: 10.106.219.157 

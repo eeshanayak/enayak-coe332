@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: enayak-final-flask
+  labels:
+    app: enayak-final-flask
+    username: enayak
+    env: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: enayak-final-flask
+  template:
+    metadata:
+      labels:
+        app: enayak-final-flask
+        username: enayak
+        env: test
+    spec:
+      containers:
+        - name: enayak-final-flask
+          imagePullPolicy: Always
+          image: eeshanayak/final:latest
+          command: ["python", "api.py"]
+          #command: ['sleep', '999999']
+
+          env:
+          - name: FLASK_APP
+            value: "api.py"
+          ports:
+          - name: http
+            containerPort: 5000
