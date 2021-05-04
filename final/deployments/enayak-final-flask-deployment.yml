@@ -24,7 +24,6 @@ spec:
           image: eeshanayak/final:latest
           command: ["python", "api.py"]
           #command: ['sleep', '999999']
-
           env:
           - name: FLASK_APP
             value: "api.py"

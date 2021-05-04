@@ -22,7 +22,7 @@ def get_data():
     # rd.set('data', json.dumps(data))
     return df.to_string()
 
-@app.route('/select', methods=['GET'])
+# @app.route('/select', methods=['GET'])
 
 @app.route('/jobs', methods=['POST'])
 def jobs_api():
@@ -30,7 +30,7 @@ def jobs_api():
         job = request.get_json(force=True)
     except Exception as e:
         return True, json.dumps({'status': "Error", 'message': 'Invalid JSON: {}.'.format(e)})
-    return json.dumps(jobs.add_job(job['start'], job['end']))
+    return json.dumps(jobs.add_job(job['x']))
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
