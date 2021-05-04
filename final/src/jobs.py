@@ -35,6 +35,8 @@ stock_and_sales_df['Date'] = pd.to_datetime(stock_and_sales_df.Date)
 #sort dataframe by product, store, and date
 stock_and_sales_df = stock_and_sales_df.sort_values(by=['Product','Store','Date'])
 
+def get_stock_and_sales():
+    return stock_and_sales_df
 
 def _generate_jid():
     return str(uuid.uuid4())
@@ -44,7 +46,7 @@ def _generate_job_key(jid):
         jid = jid.decode('utf-8')
     return 'job.{}'.format(jid)
 
-def _instantiate_job(jid, status, stores, start, end):
+def _instantiate_job(jid, status, store_input, start_date, end_date):
     if type(jid) == str:
         return {'id': jid,
                 'status': status,
