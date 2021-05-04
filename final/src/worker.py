@@ -1,4 +1,4 @@
-from jobs import q, update_job_status, rd_jobs, df
+from jobs import q, update_job_status, stock_and_sales_df, products_df
 import time
 
 
