@@ -1,5 +1,6 @@
 Flask==1.1.1
 redis
+datetime
 pandas
 requests
 hotqueue

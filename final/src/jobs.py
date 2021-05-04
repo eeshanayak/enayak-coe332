@@ -5,6 +5,7 @@ import os
 import requests
 import json
 import pandas as pd
+from datetime import datetime
 
 q = HotQueue("queue", host='10.106.219.157', port=6379, db=2)
 rd_jobs = redis.StrictRedis(host='10.106.219.157', port=6379, db=0)
@@ -47,15 +48,15 @@ def _instantiate_job(jid, status, stores, start, end):
     if type(jid) == str:
         return {'id': jid,
                 'status': status,
-                'stores': stores,
-                'start': start,
-                'end': end
+                'store_input': store_input,
+                'start_date': start_date,
+                'end_date': end_date
         }
     return {'id': jid.decode('utf-8'),
             'status': status.decode('utf-8'),
-            'stores': stores.decode('utf-8'),
-            'start': start.decode('utf-8'),
-            'end': end.decode('utf-8')
+            'store_input': store_input.decode('utf-8'),
+            'start_date': start_date.decode('utf-8'),
+            'end_date': end_date.decode('utf-8')
     }
 
 def _save_job(job_key, job_dict):
@@ -66,10 +67,10 @@ def _queue_job(jid):
     """Add a job to the redis queue."""
     q.put(jid)
 
-def add_job(stores, start, end, status="submitted"):
+def add_job(store_input, start_date, end_date, status="submitted"):
     """Add a job to the redis queue."""
     jid = _generate_jid()
-    job_dict = _instantiate_job(jid, status, stores, start, end)
+    job_dict = _instantiate_job(jid, status, store_input, start_date, end_date)
     # update call to save_job:
     _save_job(_generate_job_key(jid), job_dict)
     # update call to queue_job:
@@ -79,8 +80,8 @@ def add_job(stores, start, end, status="submitted"):
 
 def update_job_status(jid, new_status):
     """Update the status of job with job id `jid` to status `status`."""
-    jid, status, stores, start, end = rd.hmget(_generate_job_key(jid), 'id', 'status', 'stores', 'start', 'end')
-    job = _instantiate_job(jid, status, stores, start, end)
+    jid, status, store_input, start_date, end_date = rd_jobs.hmget(_generate_job_key(jid), 'id', 'status', 'store_input', 'start_date', 'end_date')
+    job = _instantiate_job(jid, status, store_input, start_date, end_date)
    
     if(new_status == 'in progress'):
         worker_IP = os.environ.get('WORKER_IP')

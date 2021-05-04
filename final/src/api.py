@@ -13,7 +13,7 @@ def jobs_api():
         job = request.get_json(force=True)
     except Exception as e:
         return True, json.dumps({'status': "Error", 'message': 'Invalid JSON: {}.'.format(e)})
-    return json.dumps(jobs.add_job(job['stores'], jobs['start'], jobs['end']))
+    return json.dumps(jobs.add_job(job['store_input'], job['start_date'], job['end_date']))
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
