@@ -188,11 +188,13 @@ def execute_job(jid):
         index += 1
     
     products_df = products_df.reset_index()
+    
+    output_json = output_df.to_json()
 
     summary_df = summary(output_df, products_df)
     summary_json = summary_df.to_json()
 
-    rd_jobs.hset(_generate_job_key(jid), 'summary rows', len(summary_df))
+    rd_jobs.hset(_generate_job_key(jid), 'output json', output_json)
     rd_jobs.hset(_generate_job_key(jid), 'summary json', summary_json)
 
     update_job_status(jid, 'complete')

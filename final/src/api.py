@@ -39,14 +39,24 @@ def get_jobs():
     return jobs_df.to_markdown()
 
 # shows summary table for job selected by id parameter
-@app.route('/select', methods=['GET'])
-def select_job():
+@app.route('/summary', methods=['GET'])
+def select_summary():
     jid = request.args.get('jid')
     summary_json = (rd_jobs.hget(jobs._generate_job_key(jid), 'summary json'))
     
     summary_df = pd.read_json(summary_json)
     
     return summary_df.to_markdown()
+
+# shows output table for job by id parameter
+@app.route('/output', methods=['GET'])
+def select_output():
+    jid = request.args.get('jid')
+    output_json = (rd_jobs.hget(jobs._generate_job_key(jid), 'output json'))
+  
+    output_df = pd.read_json(output_json)
+  
+    return output_df.to_markdown()
 
 # allows user to delete job selected by id parameter
 @app.route('/delete', methods=['GET'])
