@@ -38,6 +38,9 @@ stock_and_sales_df = stock_and_sales_df.sort_values(by=['Product','Store','Date'
 def get_stock_and_sales():
     return stock_and_sales_df
 
+def get_products():
+    return products_df
+
 def _generate_jid():
     return str(uuid.uuid4())
 
