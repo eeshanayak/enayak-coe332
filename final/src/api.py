@@ -3,32 +3,42 @@ from flask import Flask, request
 import jobs
 import requests
 import pandas as pd
-import uuid
 import redis
 from tabulate import tabulate
 
-
 app = Flask(__name__)
-rd_jobs = redis.StrictRedis(host='10.106.219.157', port='6379', db=0)
+rd_jobs = redis.StrictRedis(host='10.105.176.3', port='6379', db=0)
 
+# allows user to create a post request with store input, start date, and end date as parameters for analysis
+@app.route('/run', methods=['POST'])
+def run_job():
+    try:
+        job = request.get_json(force=True)
+    except Exception as e:
+        return True, json.dumps({'status': "Error", 'message': 'Invalid JSON: {}.'.format(e)})
+     
+    return json.dumps(jobs.add_job(job['store_input'], job['start_date'], job['end_date']))
 
+# returns job id, input parameters, and status of every job
 @app.route('/jobs', methods=['GET'])
 def get_jobs():
-    all_jobs = ''
+  
+    jobs_df = pd.DataFrame()
 
     for key in rd_jobs.keys():
-        all_jobs += key.decode('utf-8')
-    #redis_dict = {}
-    #for key in rd_jobs.keys():
-    #    redis_dict[str(key.decode('utf-8'))] = {}
-    #    redis_dict[str(key.decode('utf-8'))]['store_input'] = rd_jobs.hget(key, 'store_input').decode('utf-8')
-    #    redis_dict[str(key.decode('utf-8'))]['start_date'] = rd_jobs.hget(key, 'start_date').decode('utf-8')
-    #    redis_dict[str(key.decode('utf-8'))]['end_date'] = rd_jobs.hget(key, 'end_date').decode('utf-8')
-    #    redis_dict[str(key.decode('utf-8'))]['status'] = rd.hget(key, 'status').decode('utf-8')
-    #return json.dumps(redis_dict, indent=4)
+        row = {}
+        jid = (rd_jobs.hget(key, 'id')).decode('utf-8')
+        store = (rd_jobs.hget(key, 'store_input')).decode('utf-8')
+        start = (rd_jobs.hget(key, 'start_date')).decode('utf-8')
+        end = (rd_jobs.hget(key, 'end_date')).decode('utf-8')
+        status = (rd_jobs.hget(key, 'status')).decode('utf-8')   
+     
+        row = {'Job ID':jid, 'Store':store, 'Start Date':start, 'End Date':end, 'Status':status}
+        jobs_df = jobs_df.append(row, ignore_index = True)
 
-    return all_jobs
+    return jobs_df.to_markdown()
 
+# shows summary table for job selected by id parameter
 @app.route('/select', methods=['GET'])
 def select_job():
     jid = request.args.get('jid')
@@ -38,14 +48,15 @@ def select_job():
     
     return summary_df.to_markdown()
 
-# allows user to create a post request with store input, start date, and end date as parameters for analysis
-@app.route('/run', methods=['POST'])
-def run_job():
-    try:
-        job = request.get_json(force=True)
-    except Exception as e:
-        return True, json.dumps({'status': "Error", 'message': 'Invalid JSON: {}.'.format(e)})
-    return json.dumps(jobs.add_job(job['store_input'], job['start_date'], job['end_date']))
+# allows user to delete job selected by id parameter
+@app.route('/delete', methods=['GET'])
+def delete_job():
+    jid = request.args.get('jid')
+    
+    rd_jobs.delete(jobs._generate_job_key(jid))
+
+    return 'Job ' + jid + ' has been deleted'
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

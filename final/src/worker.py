@@ -114,7 +114,7 @@ def summary(output_df, products_df):
     summary_df['avg_gross_sales'] = summary_df.avg_sales.mul(summary_df.Product.map(products_df.set_index('Product').price))
 
     summary_df = summary_df.round({'avg_stock':0, 'avg_sales': 0, 'surplus_percentage': 0, 'avg_start':0, 'avg_end':0, 'gross_sales':0,
-                                  'avg_gross_sales':0})
+                                  'avg_gross_sales':0}).reset_index(drop=True)
 
     return summary_df
 

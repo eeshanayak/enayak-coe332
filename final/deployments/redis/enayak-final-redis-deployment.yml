@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eesha-final-redis-deployment
+  labels:
+    app: enayak-final-redis
+    username: enayak
+    env: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: enayak-final-redis
+  template:
+    metadata:
+      labels:
+        app: enayak-final-redis
+        username: enayak
+        env: test
+    spec:
+      containers:
+        - name: final
+          imagePullPolicy: Always
+          image: redis:5.0.0
+          volumeMounts:
+          - name: final-eesha-data
+            mountPath: "/data"
+      volumes:
+      - name: final-eesha-data
+        persistentVolumeClaim:
+          claimName: eesha-final-pvc

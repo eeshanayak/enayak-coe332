@@ -7,9 +7,9 @@ import json
 import pandas as pd
 from datetime import datetime
 
-q = HotQueue("queue", host='10.106.219.157', port=6379, db=2)
-rd_jobs = redis.StrictRedis(host='10.106.219.157', port=6379, db=0)
-rd_data = redis.StrictRedis(host='10.106.219.157', port=6379, db=1)
+q = HotQueue("queue", host='10.105.176.3', port=6379, db=2)
+rd_jobs = redis.StrictRedis(host='10.105.176.3', port=6379, db=0)
+rd_data = redis.StrictRedis(host='10.105.176.3', port=6379, db=1)
 
 #import stock and sales data into local dataframe
 sales_df = pd.read_csv('sales.csv').fillna(0)
