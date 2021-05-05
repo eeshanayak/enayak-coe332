@@ -23,17 +23,18 @@ products_df = pd.read_csv('products.csv')
 products_df = products_df.set_index('Product')
 products_df['wf_shelf_life'] = products_df['shelf_life'] - 2
 
-
 #consolidate stock and sales into one master file
 stock_and_sales_df = pd.merge(sales_df, stock_df,  how='left', left_on = ['Date','Store','Product'], 
                               right_on = ['Date','Store','Product']).fillna(0)
-
 
 #convert date column to pandas date format
 stock_and_sales_df['Date'] = pd.to_datetime(stock_and_sales_df.Date)
 
 #sort dataframe by product, store, and date
 stock_and_sales_df = stock_and_sales_df.sort_values(by=['Product','Store','Date'])
+
+def get_stock_days():
+    return stock_days
 
 def get_stock_and_sales():
     return stock_and_sales_df

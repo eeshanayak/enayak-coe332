@@ -1,23 +1,10 @@
 import pandas as pd
-from jobs import q, rd_jobs, update_job_status, get_stock_and_sales, get_products, _generate_job_key
+from jobs import q, rd_jobs, update_job_status, get_stock_and_sales, get_products, get_stock_days, _generate_job_key
 import redis
 import time
 
-stock_and_sales_df = get_stock_and_sales()
-products_df = get_products()
 
-def subset(store_input, start_date, end_date):
-    
-    #returns a subset of data that only pertains to what the user input
-    subset_df = pd.DataFrame()
-    
-    subset_df = subset_df.append(stock_and_sales_df.loc[(stock_and_sales_df['Store'] == store_input) 
-                                & (start_date <= stock_and_sales_df['Date'])
-                                & (stock_and_sales_df['Date'] <= end_date),
-                                  ['Date', 'Product','Store','Stock','Sales']])       
-    return subset_df
-
-def formulas_dynamic(index, counter, date, store, product, stock, sales, shelf_life):
+def formulas_dynamic(index, counter, date, store, product, stock, sales, shelf_life, output_df):
     
     #initialize new row dictionary
     new_row = {'Date':date, 'Store':store, 'Product':product,'Stock':stock,'Sales':sales}
@@ -105,18 +92,18 @@ def formulas_dynamic(index, counter, date, store, product, stock, sales, shelf_l
     
     return new_row
 
-def summary(output_df):
+def summary(output_df, products_df):
         
     #calculates aggregate of output dataframe metrics (total stock, total sales, avg sales, surplus, gapout, total start, avg start, total end, avg end)
-    summary_df = output_df.groupby(['Store','Product'], as_index=False).agg({'Stock':['sum'],'Sales':['sum','mean'],'surplus':['sum'],
+    summary_df = output_df.groupby(by=['Product'], as_index=False).agg({'Stock':['sum'],'Sales':['sum','mean'],'surplus':['sum'],
                                                    'gapout':['sum'], 'total start':['mean','min'], 'total end':['mean','min']})
     
     #renames columns
-    summary_df.columns = ['Store','Product','total_stock', 'total_sales', 'avg_sales', 'surplus', 'gapout',
+    summary_df.columns = ['Product','total_stock', 'total_sales', 'avg_sales', 'surplus', 'gapout',
                          'avg_start','min_start', 'avg_end', 'min_end']
     
     #calculates average stock based on stock days
-    summary_df['avg_stock'] = summary_df['total_stock']/stock_days
+    summary_df['avg_stock'] = summary_df['total_stock']/get_stock_days()
     
     #calculates surplus percentage
     summary_df['surplus_percentage'] = (summary_df['surplus']/summary_df['total_stock']*100)
@@ -131,37 +118,46 @@ def summary(output_df):
 
     return summary_df
 
-def aggregate_summary(summary_df):
-    aggregate_summary_df = summary_df.groupby(['Product']).sum()
-    
-    return aggregate_summary_df
 
 @q.worker
 def execute_job(jid):
     update_job_status(jid, 'in progress')    
-   
-    store_input = rd_jobs.hget(_generate_job_key(jid), 'store_input')
-    start_date = (rd_jobs.hget(_generate_job_key(jid), 'start_date')).decode("utf-8")
-    end_date = (rd_jobs.hget(_generate_job_key(jid), 'end_date')).decode("utf-8")
+  
+    stock_and_sales_df = get_stock_and_sales()
+    products_df = get_products()
 
-    subset_df = subset(store_input, start_date, end_date)
-
+    rd_jobs.hset(_generate_job_key(jid), 'stock rows', len(stock_and_sales_df))
+ 
     #finds the maximum shelf life a product can have
     products_df = get_products()
     shelf_life_column = products_df["shelf_life"]
     max_shelf_life = shelf_life_column.max() - 2
-
+   
     output_columns = ['Date','Store','Product','Stock','Sales']
-
+  
     #create columns based on maximum shelf life
     for index in range(max_shelf_life):
         start_index = "start" + str(index + 1)
         end_index = "end" + str(index + 1)
         output_columns.extend([start_index, end_index])
-    
+  
     output_columns.extend(['total start','total end','surplus','gapout'])
-
     output_df = pd.DataFrame(columns = output_columns)
+
+ 
+    store_input = (rd_jobs.hget(_generate_job_key(jid), 'store_input')).decode("utf-8")
+    start_date = (rd_jobs.hget(_generate_job_key(jid), 'start_date')).decode("utf-8")
+    end_date = (rd_jobs.hget(_generate_job_key(jid), 'end_date')).decode("utf-8")
+
+
+    subset_df = stock_and_sales_df.loc[(stock_and_sales_df['Store'] == store_input) 
+                           & (start_date <= stock_and_sales_df['Date'])
+                           & (stock_and_sales_df['Date'] <= end_date),
+                            ['Date', 'Product','Store','Stock','Sales']]
+
+
+    rd_jobs.hset(_generate_job_key(jid), 'subset rows', len(subset_df))
+
 
     #initializes index and counter variables to know where the method is at in the for loop
     index = 0
@@ -184,21 +180,20 @@ def execute_job(jid):
         elif(product != subset_df.iloc[index - 1]['Product']):
             counter = 0
 
-        
-        new_row = formulas_dynamic(index, counter, date, store, product, stock, sales, shelf_life)
+ 
+        new_row = formulas_dynamic(index, counter, date, store, product, stock, sales, shelf_life, output_df)
         output_df = output_df.append(new_row, ignore_index = True)
 
         counter += 1
         index += 1
     
     products_df = products_df.reset_index()
-    summary_df = summary(output_df)
-    aggregate_summary_df = aggregate_summary(summary_df)
 
-    output_df.to_csv('output.csv', index = False)
-    summary_df.to_csv('summary.csv', index = False)
-    aggregate_summary_df.to_csv('aggregate_summary.csv')
+    summary_df = summary(output_df, products_df)
+    summary_json = summary_df.to_json()
 
+    rd_jobs.hset(_generate_job_key(jid), 'summary rows', len(summary_df))
+    rd_jobs.hset(_generate_job_key(jid), 'summary json', summary_json)
 
     update_job_status(jid, 'complete')
 
