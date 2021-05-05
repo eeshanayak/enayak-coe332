@@ -12,7 +12,7 @@ For example, let’s this was the sample data for a cheesecake
 | 2 | 4 | 1 |
 | 3 | 2 | 0 |
 
-If the cheesecake had a 3 day shelf life, this is what it’s model would look like,
+If the cheesecake had a 3 day shelf life, this is what it’s model would look like:
 
 | Day | Stock | Sales | start1 | end1 | start2 | end2 | start3 | end3 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -23,6 +23,6 @@ If the cheesecake had a 3 day shelf life, this is what it’s model would look l
 
 At the end of day 3, there is 1 cheesecake left that is thrown out due to expiration.
 
-This app runs this simulation on a dataset and takes the start date, end date, and location of the store as parameters to generate a business report on how the sales went for the location. The food distributor can use this data to adjust future stocking to minimize surplus (number of food items thrown out due to expiration) and gapout (empty shelves on a day due to selling out).
+This app runs this simulation on a dataset and takes the start date, end date, and location of the store as parameters to generate a business report on how the sales went for the location during the given time frame. The food distributor can use this data to adjust future stocking to minimize surplus (number of food items thrown out due to expiration) and gapout (empty shelves due to sell out).
 
 Instructions on how to deploy and interact with this app are in the docs section.
