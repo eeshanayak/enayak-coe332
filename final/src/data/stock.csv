@@ -1,0 +1,677 @@
+﻿Date,Store,Product,Stock
+6/10/20,North,Chicken Soup,15
+6/10/20,North,Coffee Cake,17
+6/10/20,North,Tuna Salad,8
+6/10/20,North,Spaghetti and Meatballs,14
+6/10/20,North,Turkey Sandwich,16
+6/10/20,North,Garlic Hummus,10
+6/10/20,North,Vanilla Pudding,17
+6/10/20,North,Blueberry Oatmeal,14
+6/10/20,North,Tofu Stir Fry,9
+6/10/20,North,Broccoli Cheddar Soup,9
+6/10/20,North,Kale Salad,8
+6/10/20,North,Greek Yogurt,9
+6/10/20,North,Ham Sandwich,9
+6/12/20,North,Chicken Soup,17
+6/12/20,North,Coffee Cake,15
+6/12/20,North,Tuna Salad,5
+6/12/20,North,Spaghetti and Meatballs,15
+6/12/20,North,Turkey Sandwich,16
+6/12/20,North,Garlic Hummus,7
+6/12/20,North,Vanilla Pudding,16
+6/12/20,North,Blueberry Oatmeal,12
+6/12/20,North,Tofu Stir Fry,7
+6/12/20,North,Broccoli Cheddar Soup,8
+6/12/20,North,Kale Salad,10
+6/12/20,North,Greek Yogurt,11
+6/12/20,North,Ham Sandwich,9
+6/14/20,North,Chicken Soup,16
+6/14/20,North,Coffee Cake,15
+6/14/20,North,Tuna Salad,8
+6/14/20,North,Spaghetti and Meatballs,13
+6/14/20,North,Turkey Sandwich,15
+6/14/20,North,Garlic Hummus,8
+6/14/20,North,Vanilla Pudding,15
+6/14/20,North,Blueberry Oatmeal,11
+6/14/20,North,Tofu Stir Fry,9
+6/14/20,North,Broccoli Cheddar Soup,9
+6/14/20,North,Kale Salad,11
+6/14/20,North,Greek Yogurt,13
+6/14/20,North,Ham Sandwich,11
+6/16/20,North,Chicken Soup,12
+6/16/20,North,Coffee Cake,11
+6/16/20,North,Tuna Salad,5
+6/16/20,North,Spaghetti and Meatballs,6
+6/16/20,North,Turkey Sandwich,7
+6/16/20,North,Garlic Hummus,10
+6/16/20,North,Vanilla Pudding,10
+6/16/20,North,Blueberry Oatmeal,9
+6/16/20,North,Tofu Stir Fry,6
+6/16/20,North,Broccoli Cheddar Soup,6
+6/16/20,North,Kale Salad,6
+6/16/20,North,Greek Yogurt,7
+6/16/20,North,Ham Sandwich,7
+6/17/20,North,Chicken Soup,19
+6/17/20,North,Coffee Cake,19
+6/17/20,North,Tuna Salad,10
+6/17/20,North,Spaghetti and Meatballs,13
+6/17/20,North,Turkey Sandwich,16
+6/17/20,North,Garlic Hummus,12
+6/17/20,North,Vanilla Pudding,20
+6/17/20,North,Blueberry Oatmeal,11
+6/17/20,North,Tofu Stir Fry,10
+6/17/20,North,Broccoli Cheddar Soup,10
+6/17/20,North,Kale Salad,9
+6/17/20,North,Greek Yogurt,12
+6/17/20,North,Ham Sandwich,10
+6/19/20,North,Chicken Soup,18
+6/19/20,North,Coffee Cake,18
+6/19/20,North,Tuna Salad,6
+6/19/20,North,Spaghetti and Meatballs,16
+6/19/20,North,Turkey Sandwich,19
+6/19/20,North,Garlic Hummus,8
+6/19/20,North,Vanilla Pudding,18
+6/19/20,North,Blueberry Oatmeal,13
+6/19/20,North,Tofu Stir Fry,8
+6/19/20,North,Broccoli Cheddar Soup,9
+6/19/20,North,Kale Salad,10
+6/19/20,North,Greek Yogurt,10
+6/19/20,North,Ham Sandwich,9
+6/21/20,North,Chicken Soup,23
+6/21/20,North,Coffee Cake,20
+6/21/20,North,Tuna Salad,9
+6/21/20,North,Spaghetti and Meatballs,17
+6/21/20,North,Turkey Sandwich,21
+6/21/20,North,Garlic Hummus,13
+6/21/20,North,Vanilla Pudding,23
+6/21/20,North,Blueberry Oatmeal,15
+6/21/20,North,Tofu Stir Fry,11
+6/21/20,North,Broccoli Cheddar Soup,14
+6/21/20,North,Kale Salad,14
+6/21/20,North,Greek Yogurt,13
+6/21/20,North,Ham Sandwich,13
+6/23/20,North,Chicken Soup,11
+6/23/20,North,Coffee Cake,11
+6/23/20,North,Tuna Salad,5
+6/23/20,North,Spaghetti and Meatballs,7
+6/23/20,North,Turkey Sandwich,8
+6/23/20,North,Garlic Hummus,8
+6/23/20,North,Vanilla Pudding,10
+6/23/20,North,Blueberry Oatmeal,7
+6/23/20,North,Tofu Stir Fry,6
+6/23/20,North,Broccoli Cheddar Soup,4
+6/23/20,North,Kale Salad,6
+6/23/20,North,Greek Yogurt,8
+6/23/20,North,Ham Sandwich,6
+6/24/20,North,Chicken Soup,19
+6/24/20,North,Coffee Cake,19
+6/24/20,North,Tuna Salad,9
+6/24/20,North,Spaghetti and Meatballs,12
+6/24/20,North,Turkey Sandwich,15
+6/24/20,North,Garlic Hummus,9
+6/24/20,North,Vanilla Pudding,18
+6/24/20,North,Blueberry Oatmeal,11
+6/24/20,North,Tofu Stir Fry,8
+6/24/20,North,Broccoli Cheddar Soup,8
+6/24/20,North,Kale Salad,8
+6/24/20,North,Greek Yogurt,12
+6/24/20,North,Ham Sandwich,8
+6/26/20,North,Chicken Soup,19
+6/26/20,North,Coffee Cake,23
+6/26/20,North,Tuna Salad,8
+6/26/20,North,Spaghetti and Meatballs,16
+6/26/20,North,Turkey Sandwich,19
+6/26/20,North,Garlic Hummus,10
+6/26/20,North,Vanilla Pudding,21
+6/26/20,North,Blueberry Oatmeal,12
+6/26/20,North,Tofu Stir Fry,10
+6/26/20,North,Broccoli Cheddar Soup,13
+6/26/20,North,Kale Salad,13
+6/26/20,North,Greek Yogurt,13
+6/26/20,North,Ham Sandwich,13
+6/28/20,North,Chicken Soup,22
+6/28/20,North,Coffee Cake,20
+6/28/20,North,Tuna Salad,9
+6/28/20,North,Spaghetti and Meatballs,18
+6/28/20,North,Turkey Sandwich,21
+6/28/20,North,Garlic Hummus,13
+6/28/20,North,Vanilla Pudding,21
+6/28/20,North,Blueberry Oatmeal,16
+6/28/20,North,Tofu Stir Fry,11
+6/28/20,North,Broccoli Cheddar Soup,13
+6/28/20,North,Kale Salad,13
+6/28/20,North,Greek Yogurt,15
+6/28/20,North,Ham Sandwich,13
+6/30/20,North,Chicken Soup,11
+6/30/20,North,Coffee Cake,10
+6/30/20,North,Tuna Salad,4
+6/30/20,North,Spaghetti and Meatballs,7
+6/30/20,North,Turkey Sandwich,8
+6/30/20,North,Garlic Hummus,7
+6/30/20,North,Vanilla Pudding,10
+6/30/20,North,Blueberry Oatmeal,6
+6/30/20,North,Tofu Stir Fry,5
+6/30/20,North,Broccoli Cheddar Soup,4
+6/30/20,North,Kale Salad,5
+6/30/20,North,Greek Yogurt,7
+6/30/20,North,Ham Sandwich,6
+7/1/20,North,Chicken Soup,18
+7/1/20,North,Coffee Cake,18
+7/1/20,North,Tuna Salad,9
+7/1/20,North,Spaghetti and Meatballs,12
+7/1/20,North,Turkey Sandwich,16
+7/1/20,North,Garlic Hummus,10
+7/1/20,North,Vanilla Pudding,17
+7/1/20,North,Blueberry Oatmeal,11
+7/1/20,North,Tofu Stir Fry,9
+7/1/20,North,Broccoli Cheddar Soup,7
+7/1/20,North,Kale Salad,8
+7/1/20,North,Greek Yogurt,12
+7/1/20,North,Ham Sandwich,9
+7/3/20,North,Chicken Soup,11
+7/3/20,North,Coffee Cake,11
+7/3/20,North,Tuna Salad,5
+7/3/20,North,Spaghetti and Meatballs,7
+7/3/20,North,Turkey Sandwich,11
+7/3/20,North,Garlic Hummus,7
+7/3/20,North,Vanilla Pudding,9
+7/3/20,North,Blueberry Oatmeal,8
+7/3/20,North,Tofu Stir Fry,5
+7/3/20,North,Broccoli Cheddar Soup,6
+7/3/20,North,Kale Salad,5
+7/3/20,North,Greek Yogurt,6
+7/3/20,North,Ham Sandwich,6
+7/5/20,North,Chicken Soup,25
+7/5/20,North,Coffee Cake,22
+7/5/20,North,Tuna Salad,12
+7/5/20,North,Spaghetti and Meatballs,24
+7/5/20,North,Turkey Sandwich,24
+7/5/20,North,Garlic Hummus,16
+7/5/20,North,Vanilla Pudding,24
+7/5/20,North,Blueberry Oatmeal,18
+7/5/20,North,Tofu Stir Fry,14
+7/5/20,North,Broccoli Cheddar Soup,18
+7/5/20,North,Kale Salad,14
+7/5/20,North,Greek Yogurt,18
+7/5/20,North,Ham Sandwich,18
+7/7/20,North,Chicken Soup,14
+7/7/20,North,Coffee Cake,14
+7/7/20,North,Tuna Salad,14
+7/7/20,North,Spaghetti and Meatballs,14
+7/7/20,North,Turkey Sandwich,14
+7/7/20,North,Garlic Hummus,14
+7/7/20,North,Vanilla Pudding,14
+7/7/20,North,Blueberry Oatmeal,14
+7/7/20,North,Tofu Stir Fry,14
+7/7/20,North,Broccoli Cheddar Soup,14
+7/7/20,North,Kale Salad,14
+7/7/20,North,Greek Yogurt,14
+7/7/20,North,Ham Sandwich,14
+7/8/20,North,Chicken Soup,19
+7/8/20,North,Coffee Cake,19
+7/8/20,North,Tuna Salad,10
+7/8/20,North,Spaghetti and Meatballs,14
+7/8/20,North,Turkey Sandwich,16
+7/8/20,North,Garlic Hummus,10
+7/8/20,North,Vanilla Pudding,17
+7/8/20,North,Blueberry Oatmeal,12
+7/8/20,North,Tofu Stir Fry,10
+7/8/20,North,Broccoli Cheddar Soup,12
+7/8/20,North,Kale Salad,10
+7/8/20,North,Greek Yogurt,13
+7/8/20,North,Ham Sandwich,12
+7/10/20,North,Chicken Soup,24
+7/10/20,North,Coffee Cake,24
+7/10/20,North,Tuna Salad,18
+7/10/20,North,Spaghetti and Meatballs,18
+7/10/20,North,Turkey Sandwich,24
+7/10/20,North,Garlic Hummus,20
+7/10/20,North,Vanilla Pudding,18
+7/10/20,North,Blueberry Oatmeal,18
+7/10/20,North,Tofu Stir Fry,14
+7/10/20,North,Broccoli Cheddar Soup,14
+7/10/20,North,Kale Salad,14
+7/10/20,North,Greek Yogurt,14
+7/10/20,North,Ham Sandwich,18
+7/12/20,North,Chicken Soup,24
+7/12/20,North,Coffee Cake,24
+7/12/20,North,Tuna Salad,11
+7/12/20,North,Spaghetti and Meatballs,24
+7/12/20,North,Turkey Sandwich,24
+7/12/20,North,Garlic Hummus,16
+7/12/20,North,Vanilla Pudding,24
+7/12/20,North,Blueberry Oatmeal,19
+7/12/20,North,Tofu Stir Fry,13
+7/12/20,North,Broccoli Cheddar Soup,17
+7/12/20,North,Kale Salad,16
+7/12/20,North,Greek Yogurt,19
+7/12/20,North,Ham Sandwich,16
+7/14/20,North,Chicken Soup,14
+7/14/20,North,Coffee Cake,14
+7/14/20,North,Tuna Salad,14
+7/14/20,North,Spaghetti and Meatballs,14
+7/14/20,North,Turkey Sandwich,14
+7/14/20,North,Garlic Hummus,14
+7/14/20,North,Vanilla Pudding,14
+7/14/20,North,Blueberry Oatmeal,14
+7/14/20,North,Tofu Stir Fry,14
+7/14/20,North,Broccoli Cheddar Soup,14
+7/14/20,North,Kale Salad,14
+7/14/20,North,Greek Yogurt,14
+7/14/20,North,Ham Sandwich,14
+7/15/20,North,Chicken Soup,25
+7/15/20,North,Coffee Cake,23
+7/15/20,North,Tuna Salad,12
+7/15/20,North,Spaghetti and Meatballs,15
+7/15/20,North,Turkey Sandwich,20
+7/15/20,North,Garlic Hummus,14
+7/15/20,North,Vanilla Pudding,21
+7/15/20,North,Blueberry Oatmeal,14
+7/15/20,North,Tofu Stir Fry,12
+7/15/20,North,Broccoli Cheddar Soup,10
+7/15/20,North,Kale Salad,12
+7/15/20,North,Greek Yogurt,15
+7/15/20,North,Ham Sandwich,13
+7/17/20,North,Chicken Soup,50
+7/17/20,North,Coffee Cake,46
+7/17/20,North,Tuna Salad,24
+7/17/20,North,Spaghetti and Meatballs,30
+7/17/20,North,Turkey Sandwich,40
+7/17/20,North,Garlic Hummus,28
+7/17/20,North,Vanilla Pudding,42
+7/17/20,North,Blueberry Oatmeal,28
+7/17/20,North,Tofu Stir Fry,24
+7/17/20,North,Broccoli Cheddar Soup,24
+7/17/20,North,Kale Salad,24
+7/17/20,North,Greek Yogurt,30
+7/17/20,North,Ham Sandwich,26
+7/19/20,North,Chicken Soup,26
+7/19/20,North,Coffee Cake,26
+7/19/20,North,Tuna Salad,11
+7/19/20,North,Spaghetti and Meatballs,26
+7/19/20,North,Turkey Sandwich,27
+7/19/20,North,Garlic Hummus,20
+7/19/20,North,Vanilla Pudding,30
+7/19/20,North,Blueberry Oatmeal,21
+7/19/20,North,Tofu Stir Fry,14
+7/19/20,North,Broccoli Cheddar Soup,16
+7/19/20,North,Kale Salad,15
+7/19/20,North,Greek Yogurt,23
+7/19/20,North,Ham Sandwich,18
+7/21/20,North,Chicken Soup,18
+7/21/20,North,Coffee Cake,14
+7/21/20,North,Tuna Salad,8
+7/21/20,North,Spaghetti and Meatballs,12
+7/21/20,North,Turkey Sandwich,14
+7/21/20,North,Garlic Hummus,12
+7/21/20,North,Vanilla Pudding,15
+7/21/20,North,Blueberry Oatmeal,10
+7/21/20,North,Tofu Stir Fry,10
+7/21/20,North,Broccoli Cheddar Soup,10
+7/21/20,North,Kale Salad,10
+7/21/20,North,Greek Yogurt,12
+7/21/20,North,Ham Sandwich,12
+7/22/20,North,Chicken Soup,30
+7/22/20,North,Coffee Cake,25
+7/22/20,North,Tuna Salad,18
+7/22/20,North,Spaghetti and Meatballs,20
+7/22/20,North,Turkey Sandwich,24
+7/22/20,North,Garlic Hummus,22
+7/22/20,North,Vanilla Pudding,22
+7/22/20,North,Blueberry Oatmeal,16
+7/22/20,North,Tofu Stir Fry,16
+7/22/20,North,Broccoli Cheddar Soup,16
+7/22/20,North,Kale Salad,17
+7/22/20,North,Greek Yogurt,19
+7/22/20,North,Ham Sandwich,18
+7/24/20,North,Chicken Soup,26
+7/24/20,North,Coffee Cake,26
+7/24/20,North,Tuna Salad,14
+7/24/20,North,Spaghetti and Meatballs,19
+7/24/20,North,Turkey Sandwich,26
+7/24/20,North,Garlic Hummus,20
+7/24/20,North,Vanilla Pudding,26
+7/24/20,North,Blueberry Oatmeal,18
+7/24/20,North,Tofu Stir Fry,14
+7/24/20,North,Broccoli Cheddar Soup,14
+7/24/20,North,Kale Salad,12
+7/24/20,North,Greek Yogurt,20
+7/24/20,North,Ham Sandwich,18
+6/10/20,South,Chicken Soup,2
+6/10/20,South,Coffee Cake,3
+6/10/20,South,Tuna Salad,2
+6/10/20,South,Spaghetti and Meatballs,2
+6/10/20,South,Turkey Sandwich,2
+6/10/20,South,Garlic Hummus,3
+6/10/20,South,Vanilla Pudding,4
+6/10/20,South,Blueberry Oatmeal,3
+6/10/20,South,Tofu Stir Fry,1
+6/10/20,South,Broccoli Cheddar Soup,2
+6/10/20,South,Kale Salad,1
+6/10/20,South,Greek Yogurt,2
+6/10/20,South,Ham Sandwich,2
+6/12/20,South,Chicken Soup,3
+6/12/20,South,Coffee Cake,4
+6/12/20,South,Tuna Salad,1
+6/12/20,South,Spaghetti and Meatballs,3
+6/12/20,South,Turkey Sandwich,3
+6/12/20,South,Garlic Hummus,3
+6/12/20,South,Vanilla Pudding,4
+6/12/20,South,Blueberry Oatmeal,5
+6/12/20,South,Tofu Stir Fry,5
+6/12/20,South,Broccoli Cheddar Soup,1
+6/12/20,South,Kale Salad,3
+6/12/20,South,Greek Yogurt,3
+6/12/20,South,Ham Sandwich,5
+6/14/20,South,Chicken Soup,2
+6/14/20,South,Coffee Cake,2
+6/14/20,South,Tuna Salad,2
+6/14/20,South,Spaghetti and Meatballs,2
+6/14/20,South,Turkey Sandwich,2
+6/14/20,South,Garlic Hummus,2
+6/14/20,South,Vanilla Pudding,2
+6/14/20,South,Blueberry Oatmeal,2
+6/14/20,South,Tofu Stir Fry,2
+6/14/20,South,Broccoli Cheddar Soup,2
+6/14/20,South,Kale Salad,2
+6/14/20,South,Greek Yogurt,2
+6/14/20,South,Ham Sandwich,2
+6/16/20,South,Chicken Soup,1
+6/16/20,South,Coffee Cake,2
+6/16/20,South,Tuna Salad,1
+6/16/20,South,Spaghetti and Meatballs,2
+6/16/20,South,Turkey Sandwich,2
+6/16/20,South,Garlic Hummus,2
+6/16/20,South,Vanilla Pudding,1
+6/16/20,South,Blueberry Oatmeal,2
+6/16/20,South,Tofu Stir Fry,3
+6/16/20,South,Broccoli Cheddar Soup,2
+6/16/20,South,Kale Salad,1
+6/16/20,South,Greek Yogurt,1
+6/16/20,South,Ham Sandwich,1
+6/17/20,South,Chicken Soup,2
+6/17/20,South,Coffee Cake,3
+6/17/20,South,Tuna Salad,2
+6/17/20,South,Spaghetti and Meatballs,2
+6/17/20,South,Turkey Sandwich,3
+6/17/20,South,Garlic Hummus,2
+6/17/20,South,Vanilla Pudding,3
+6/17/20,South,Blueberry Oatmeal,3
+6/17/20,South,Tofu Stir Fry,5
+6/17/20,South,Broccoli Cheddar Soup,3
+6/17/20,South,Kale Salad,2
+6/17/20,South,Greek Yogurt,2
+6/17/20,South,Ham Sandwich,2
+6/19/20,South,Chicken Soup,3
+6/19/20,South,Coffee Cake,5
+6/19/20,South,Tuna Salad,1
+6/19/20,South,Spaghetti and Meatballs,3
+6/19/20,South,Turkey Sandwich,3
+6/19/20,South,Garlic Hummus,3
+6/19/20,South,Vanilla Pudding,4
+6/19/20,South,Blueberry Oatmeal,5
+6/19/20,South,Tofu Stir Fry,5
+6/19/20,South,Broccoli Cheddar Soup,3
+6/19/20,South,Kale Salad,3
+6/19/20,South,Greek Yogurt,5
+6/19/20,South,Ham Sandwich,5
+6/21/20,South,Chicken Soup,2
+6/21/20,South,Coffee Cake,2
+6/21/20,South,Tuna Salad,2
+6/21/20,South,Spaghetti and Meatballs,2
+6/21/20,South,Turkey Sandwich,2
+6/21/20,South,Garlic Hummus,2
+6/21/20,South,Vanilla Pudding,2
+6/21/20,South,Blueberry Oatmeal,2
+6/21/20,South,Tofu Stir Fry,2
+6/21/20,South,Broccoli Cheddar Soup,2
+6/21/20,South,Kale Salad,2
+6/21/20,South,Greek Yogurt,3
+6/21/20,South,Ham Sandwich,2
+6/23/20,South,Chicken Soup,1
+6/23/20,South,Coffee Cake,2
+6/23/20,South,Tuna Salad,1
+6/23/20,South,Spaghetti and Meatballs,2
+6/23/20,South,Turkey Sandwich,2
+6/23/20,South,Garlic Hummus,2
+6/23/20,South,Vanilla Pudding,1
+6/23/20,South,Blueberry Oatmeal,2
+6/23/20,South,Tofu Stir Fry,3
+6/23/20,South,Broccoli Cheddar Soup,2
+6/23/20,South,Kale Salad,1
+6/23/20,South,Greek Yogurt,2
+6/23/20,South,Ham Sandwich,1
+6/24/20,South,Chicken Soup,2
+6/24/20,South,Coffee Cake,4
+6/24/20,South,Tuna Salad,2
+6/24/20,South,Spaghetti and Meatballs,3
+6/24/20,South,Turkey Sandwich,3
+6/24/20,South,Garlic Hummus,2
+6/24/20,South,Vanilla Pudding,3
+6/24/20,South,Blueberry Oatmeal,3
+6/24/20,South,Tofu Stir Fry,5
+6/24/20,South,Broccoli Cheddar Soup,3
+6/24/20,South,Kale Salad,2
+6/24/20,South,Greek Yogurt,3
+6/24/20,South,Ham Sandwich,2
+6/26/20,South,Chicken Soup,3
+6/26/20,South,Coffee Cake,8
+6/26/20,South,Tuna Salad,3
+6/26/20,South,Spaghetti and Meatballs,3
+6/26/20,South,Turkey Sandwich,3
+6/26/20,South,Garlic Hummus,3
+6/26/20,South,Vanilla Pudding,5
+6/26/20,South,Blueberry Oatmeal,5
+6/26/20,South,Tofu Stir Fry,4
+6/26/20,South,Broccoli Cheddar Soup,4
+6/26/20,South,Kale Salad,5
+6/26/20,South,Greek Yogurt,6
+6/26/20,South,Ham Sandwich,5
+6/28/20,South,Chicken Soup,2
+6/28/20,South,Coffee Cake,2
+6/28/20,South,Tuna Salad,1
+6/28/20,South,Spaghetti and Meatballs,2
+6/28/20,South,Turkey Sandwich,2
+6/28/20,South,Garlic Hummus,2
+6/28/20,South,Vanilla Pudding,1
+6/28/20,South,Blueberry Oatmeal,2
+6/28/20,South,Tofu Stir Fry,2
+6/28/20,South,Broccoli Cheddar Soup,1
+6/28/20,South,Kale Salad,2
+6/28/20,South,Greek Yogurt,3
+6/28/20,South,Ham Sandwich,2
+6/30/20,South,Chicken Soup,2
+6/30/20,South,Coffee Cake,2
+6/30/20,South,Tuna Salad,1
+6/30/20,South,Spaghetti and Meatballs,2
+6/30/20,South,Turkey Sandwich,1
+6/30/20,South,Garlic Hummus,2
+6/30/20,South,Vanilla Pudding,1
+6/30/20,South,Blueberry Oatmeal,2
+6/30/20,South,Tofu Stir Fry,2
+6/30/20,South,Broccoli Cheddar Soup,1
+6/30/20,South,Kale Salad,1
+6/30/20,South,Greek Yogurt,2
+6/30/20,South,Ham Sandwich,1
+7/1/20,South,Chicken Soup,3
+7/1/20,South,Coffee Cake,4
+7/1/20,South,Tuna Salad,2
+7/1/20,South,Spaghetti and Meatballs,3
+7/1/20,South,Turkey Sandwich,3
+7/1/20,South,Garlic Hummus,2
+7/1/20,South,Vanilla Pudding,3
+7/1/20,South,Blueberry Oatmeal,3
+7/1/20,South,Tofu Stir Fry,5
+7/1/20,South,Broccoli Cheddar Soup,3
+7/1/20,South,Kale Salad,2
+7/1/20,South,Greek Yogurt,3
+7/1/20,South,Ham Sandwich,2
+7/3/20,South,Chicken Soup,2
+7/3/20,South,Coffee Cake,3
+7/3/20,South,Tuna Salad,2
+7/3/20,South,Spaghetti and Meatballs,2
+7/3/20,South,Turkey Sandwich,2
+7/3/20,South,Garlic Hummus,2
+7/3/20,South,Vanilla Pudding,2
+7/3/20,South,Blueberry Oatmeal,3
+7/3/20,South,Tofu Stir Fry,2
+7/3/20,South,Broccoli Cheddar Soup,2
+7/3/20,South,Kale Salad,2
+7/3/20,South,Greek Yogurt,2
+7/3/20,South,Ham Sandwich,3
+7/5/20,South,Chicken Soup,3
+7/5/20,South,Coffee Cake,2
+7/5/20,South,Tuna Salad,2
+7/5/20,South,Spaghetti and Meatballs,2
+7/5/20,South,Turkey Sandwich,2
+7/5/20,South,Garlic Hummus,2
+7/5/20,South,Vanilla Pudding,2
+7/5/20,South,Blueberry Oatmeal,2
+7/5/20,South,Tofu Stir Fry,2
+7/5/20,South,Broccoli Cheddar Soup,2
+7/5/20,South,Kale Salad,2
+7/5/20,South,Greek Yogurt,3
+7/5/20,South,Ham Sandwich,2
+7/7/20,South,Chicken Soup,3
+7/7/20,South,Coffee Cake,3
+7/7/20,South,Tuna Salad,3
+7/7/20,South,Spaghetti and Meatballs,3
+7/7/20,South,Turkey Sandwich,3
+7/7/20,South,Garlic Hummus,3
+7/7/20,South,Vanilla Pudding,3
+7/7/20,South,Blueberry Oatmeal,3
+7/7/20,South,Tofu Stir Fry,3
+7/7/20,South,Broccoli Cheddar Soup,3
+7/7/20,South,Kale Salad,3
+7/7/20,South,Greek Yogurt,3
+7/7/20,South,Ham Sandwich,3
+7/8/20,South,Chicken Soup,4
+7/8/20,South,Coffee Cake,4
+7/8/20,South,Tuna Salad,3
+7/8/20,South,Spaghetti and Meatballs,4
+7/8/20,South,Turkey Sandwich,4
+7/8/20,South,Garlic Hummus,3
+7/8/20,South,Vanilla Pudding,4
+7/8/20,South,Blueberry Oatmeal,4
+7/8/20,South,Tofu Stir Fry,5
+7/8/20,South,Broccoli Cheddar Soup,4
+7/8/20,South,Kale Salad,3
+7/8/20,South,Greek Yogurt,4
+7/8/20,South,Ham Sandwich,3
+7/10/20,South,Chicken Soup,4
+7/10/20,South,Coffee Cake,8
+7/10/20,South,Tuna Salad,4
+7/10/20,South,Spaghetti and Meatballs,4
+7/10/20,South,Turkey Sandwich,4
+7/10/20,South,Garlic Hummus,6
+7/10/20,South,Vanilla Pudding,5
+7/10/20,South,Blueberry Oatmeal,8
+7/10/20,South,Tofu Stir Fry,4
+7/10/20,South,Broccoli Cheddar Soup,7
+7/10/20,South,Kale Salad,4
+7/10/20,South,Greek Yogurt,4
+7/10/20,South,Ham Sandwich,6
+7/12/20,South,Chicken Soup,2
+7/12/20,South,Coffee Cake,2
+7/12/20,South,Tuna Salad,2
+7/12/20,South,Spaghetti and Meatballs,2
+7/12/20,South,Turkey Sandwich,2
+7/12/20,South,Garlic Hummus,2
+7/12/20,South,Vanilla Pudding,2
+7/12/20,South,Blueberry Oatmeal,2
+7/12/20,South,Tofu Stir Fry,2
+7/12/20,South,Broccoli Cheddar Soup,2
+7/12/20,South,Kale Salad,2
+7/12/20,South,Greek Yogurt,3
+7/12/20,South,Ham Sandwich,2
+7/14/20,South,Chicken Soup,3
+7/14/20,South,Coffee Cake,3
+7/14/20,South,Tuna Salad,3
+7/14/20,South,Spaghetti and Meatballs,3
+7/14/20,South,Turkey Sandwich,3
+7/14/20,South,Garlic Hummus,3
+7/14/20,South,Vanilla Pudding,3
+7/14/20,South,Blueberry Oatmeal,3
+7/14/20,South,Tofu Stir Fry,3
+7/14/20,South,Broccoli Cheddar Soup,3
+7/14/20,South,Kale Salad,3
+7/14/20,South,Greek Yogurt,3
+7/14/20,South,Ham Sandwich,3
+7/15/20,South,Chicken Soup,4
+7/15/20,South,Coffee Cake,4
+7/15/20,South,Tuna Salad,4
+7/15/20,South,Spaghetti and Meatballs,4
+7/15/20,South,Turkey Sandwich,4
+7/15/20,South,Garlic Hummus,4
+7/15/20,South,Vanilla Pudding,4
+7/15/20,South,Blueberry Oatmeal,4
+7/15/20,South,Tofu Stir Fry,4
+7/15/20,South,Broccoli Cheddar Soup,4
+7/15/20,South,Kale Salad,4
+7/15/20,South,Greek Yogurt,4
+7/15/20,South,Ham Sandwich,4
+7/17/20,South,Chicken Soup,10
+7/17/20,South,Coffee Cake,12
+7/17/20,South,Tuna Salad,10
+7/17/20,South,Spaghetti and Meatballs,10
+7/17/20,South,Turkey Sandwich,10
+7/17/20,South,Garlic Hummus,10
+7/17/20,South,Vanilla Pudding,10
+7/17/20,South,Blueberry Oatmeal,10
+7/17/20,South,Tofu Stir Fry,10
+7/17/20,South,Broccoli Cheddar Soup,10
+7/17/20,South,Kale Salad,8
+7/17/20,South,Greek Yogurt,12
+7/17/20,South,Ham Sandwich,10
+7/19/20,South,Chicken Soup,2
+7/19/20,South,Coffee Cake,2
+7/19/20,South,Tuna Salad,1
+7/19/20,South,Spaghetti and Meatballs,2
+7/19/20,South,Turkey Sandwich,1
+7/19/20,South,Garlic Hummus,2
+7/19/20,South,Vanilla Pudding,1
+7/19/20,South,Blueberry Oatmeal,2
+7/19/20,South,Tofu Stir Fry,1
+7/19/20,South,Broccoli Cheddar Soup,1
+7/19/20,South,Kale Salad,2
+7/19/20,South,Greek Yogurt,2
+7/19/20,South,Ham Sandwich,2
+7/21/20,South,Chicken Soup,2
+7/21/20,South,Coffee Cake,2
+7/21/20,South,Tuna Salad,3
+7/21/20,South,Spaghetti and Meatballs,2
+7/21/20,South,Turkey Sandwich,2
+7/21/20,South,Garlic Hummus,2
+7/21/20,South,Vanilla Pudding,2
+7/21/20,South,Blueberry Oatmeal,2
+7/21/20,South,Tofu Stir Fry,1
+7/21/20,South,Broccoli Cheddar Soup,2
+7/21/20,South,Kale Salad,2
+7/21/20,South,Greek Yogurt,3
+7/21/20,South,Ham Sandwich,2
+7/22/20,South,Chicken Soup,4
+7/22/20,South,Coffee Cake,3
+7/22/20,South,Tuna Salad,5
+7/22/20,South,Spaghetti and Meatballs,3
+7/22/20,South,Turkey Sandwich,3
+7/22/20,South,Garlic Hummus,3
+7/22/20,South,Vanilla Pudding,3
+7/22/20,South,Blueberry Oatmeal,3
+7/22/20,South,Tofu Stir Fry,3
+7/22/20,South,Broccoli Cheddar Soup,3
+7/22/20,South,Kale Salad,3
+7/22/20,South,Greek Yogurt,5
+7/22/20,South,Ham Sandwich,3
+7/24/20,South,Chicken Soup,6
+7/24/20,South,Coffee Cake,7
+7/24/20,South,Tuna Salad,4
+7/24/20,South,Spaghetti and Meatballs,5
+7/24/20,South,Turkey Sandwich,5
+7/24/20,South,Garlic Hummus,5
+7/24/20,South,Vanilla Pudding,4
+7/24/20,South,Blueberry Oatmeal,5
+7/24/20,South,Tofu Stir Fry,5
+7/24/20,South,Broccoli Cheddar Soup,5
+7/24/20,South,Kale Salad,4
+7/24/20,South,Greek Yogurt,5
+7/24/20,South,Ham Sandwich,5
