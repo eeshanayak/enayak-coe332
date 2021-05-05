@@ -1,5 +1,6 @@
 Flask==1.1.1
 redis
+tabulate
 datetime
 pandas
 requests
