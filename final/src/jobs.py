@@ -12,14 +12,14 @@ rd_jobs = redis.StrictRedis(host='10.105.176.3', port=6379, db=0)
 rd_data = redis.StrictRedis(host='10.105.176.3', port=6379, db=1)
 
 #import stock and sales data into local dataframe
-sales_df = pd.read_csv('sales.csv').fillna(0)
-stock_df = pd.read_csv('stock.csv').fillna(0)
+sales_df = pd.read_csv('data/sales.csv').fillna(0)
+stock_df = pd.read_csv('data/stock.csv').fillna(0)
 
 #variable to keep a count of stock days
 stock_days = stock_df['Date'].nunique()
 
 #import products and subtract 2 days due to transport time
-products_df = pd.read_csv('products.csv')
+products_df = pd.read_csv('data/products.csv')
 products_df = products_df.set_index('Product')
 products_df['wf_shelf_life'] = products_df['shelf_life'] - 2
 
