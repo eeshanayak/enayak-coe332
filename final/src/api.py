@@ -5,9 +5,12 @@ import requests
 import pandas as pd
 import redis
 from tabulate import tabulate
+import os
 
 app = Flask(__name__)
-rd_jobs = redis.StrictRedis(host='10.105.176.3', port='6379', db=0)
+
+redis_ip = os.environ.get('ENAYAK_FINAL_REDIS_SERVICE_PORT_6379_TCP_ADDR')
+rd_jobs = redis.StrictRedis(host=redis_ip, port='6379', db=0)
 
 # allows user to create a post request with store input, start date, and end date as parameters for analysis
 @app.route('/run', methods=['POST'])
