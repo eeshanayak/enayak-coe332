@@ -44,11 +44,12 @@ root@enayak-final-flask-746c85788d-gmnxh:/app# curl -X POST -H "content-type: ap
 ## Route: /jobs
 ```
 root@enayak-final-flask-746c85788d-gmnxh:/app# curl 10.244.10.36:5000/jobs
+```
 |    | End Date   | Job ID                               | Start Date   | Status   | Store   |
 |---:|:-----------|:-------------------------------------|:-------------|:---------|:--------|
 |  0 | 7/10/2020  | ec323e01-fe0c-4a0d-ae77-97a4a72851e6 | 6/17/2020    | complete | North   |
 |  1 | 7/10/2020  | 532456f0-a583-49d6-8b38-186d23ba95c6 | 6/17/2020    | complete | South   |
-```
+
 
 ## Route: /output
 ```
