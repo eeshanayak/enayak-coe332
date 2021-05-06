@@ -27,10 +27,10 @@ Then exec into the flask deployment
 kubectl exec -it enayak-final-flask-746c85788d-gmnxh -- /bin/bash
 ```
 
-In the flask deployment, curl a POST request giving the parameters of the store location, start date, and end date for analysis.
-Currently the sample data has:
-Locations: North, South
-Dates: 6/10/2020 - 7/24/2020
+In the flask deployment, curl a POST request giving the parameters of the store location, start date, and end date for analysis.\
+Currently the sample data has:\
+Locations: North, South\
+Dates: 6/10/2020 - 7/24/2020\
 
 I created 2 jobs
 ```
@@ -50,7 +50,7 @@ root@enayak-final-flask-746c85788d-gmnxh:/app# curl 10.244.10.36:5000/jobs
 |  1 | 7/10/2020  | 532456f0-a583-49d6-8b38-186d23ba95c6 | 6/17/2020    | complete | South   |
 ```
 
-## Route /output
+## Route: /output
 ```
 root@enayak-final-flask-746c85788d-gmnxh:/app# curl 10.244.10.36:5000/output?jid='ec323e01-fe0c-4a0d-ae77-97a4a72851e6'
 |     | Date                | Store   | Product                 |   Stock |   Sales |   start1 |   end1 |   start2 |   end2 |   start3 |   end3 |   start4 |   end4 |   start5 |   end5 |   total start |   total end |   surplus |   gapout |
