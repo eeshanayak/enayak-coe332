@@ -3,7 +3,7 @@
 This app simulates how perishable food items are shelved at grocery stores and tracks how much gets thrown away due to expiration, given the stock and sales data for a time period. It is assumed in this model that the items are sold in priority of earliest expiration.
 
 
-For example, let’s this was the sample data for a cheesecake
+For example, let’s look at this sample data for a cheesecake
 
 | Day | Stock | Sales |
 | --- | --- | --- |
