@@ -38,7 +38,7 @@ root@enayak-final-flask-746c85788d-gmnxh:/app# curl -X POST -H "content-type: ap
 {"id": "ec323e01-fe0c-4a0d-ae77-97a4a72851e6", "status": "submitted", "store_input": "North", "start_date": "6/17/2020", "end_date": "7/10/2020"}
 
 root@enayak-final-flask-746c85788d-gmnxh:/app# curl -X POST -H "content-type: application/json" -d '{"store_input":"South", "start_date": "6/17/2020", "end_date":"7/10/2020"}' 10.244.10.36:5000/run
-{"id": "532456f0-a583-49d6-8b38-186d23ba95c6", curl -X POST -H "content-type: application/json" -d '{"store_input":"South", "start_date": "6/17/2020", "end_date":"7/10/2020"}'
+{"id": "532456f0-a583-49d6-8b38-186d23ba95c6", "status": "submitted", "store_input": "South", "start_date": "6/17/2020", "end_date": "7/10/2020"}
 ```
 
 ## Route: /jobs
