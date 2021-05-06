@@ -30,7 +30,7 @@ kubectl exec -it enayak-final-flask-746c85788d-gmnxh -- /bin/bash
 In the flask deployment, curl a POST request giving the parameters of the store location, start date, and end date for analysis.\
 Currently the sample data has:\
 Locations: North, South\
-Dates: 6/10/2020 - 7/24/2020\
+Dates: 6/10/2020 - 7/24/2020
 
 I created 2 jobs
 ```
