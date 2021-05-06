@@ -54,6 +54,7 @@ root@enayak-final-flask-746c85788d-gmnxh:/app# curl 10.244.10.36:5000/jobs
 ## Route: /output
 ```
 root@enayak-final-flask-746c85788d-gmnxh:/app# curl 10.244.10.36:5000/output?jid='ec323e01-fe0c-4a0d-ae77-97a4a72851e6'
+```
 |     | Date                | Store   | Product                 |   Stock |   Sales |   start1 |   end1 |   start2 |   end2 |   start3 |   end3 |   start4 |   end4 |   start5 |   end5 |   total start |   total end |   surplus |   gapout |
 |----:|:--------------------|:--------|:------------------------|--------:|--------:|---------:|-------:|---------:|-------:|---------:|-------:|---------:|-------:|---------:|-------:|--------------:|------------:|----------:|---------:|
 |   0 | 2020-06-17 00:00:00 | North   | Blueberry Oatmeal       |      11 |       7 |       11 |      4 |        0 |      0 |        0 |      0 |        0 |      0 |      nan |    nan |            11 |           4 |         0 |        0 |
@@ -368,11 +369,12 @@ root@enayak-final-flask-746c85788d-gmnxh:/app# curl 10.244.10.36:5000/output?jid
 | 309 | 2020-07-08 00:00:00 | North   | Vanilla Pudding         |      17 |      13 |       17 |     11 |        7 |      0 |        0 |      0 |        0 |      0 |      nan |    nan |            24 |          11 |         0 |        0 |
 | 310 | 2020-07-09 00:00:00 | North   | Vanilla Pudding         |       0 |       4 |        0 |      0 |       11 |      7 |        0 |      0 |        0 |      0 |      nan |    nan |            11 |           7 |         0 |        0 |
 | 311 | 2020-07-10 00:00:00 | North   | Vanilla Pudding         |      18 |      13 |       18 |     12 |        0 |      0 |        7 |      0 |        0 |      0 |      nan |    nan |            25 |   
-```
+
 
 ## Route: /summary
 ```
 root@enayak-final-flask-746c85788d-gmnxh:/app# curl 10.244.10.36:5000/summary?jid='ec323e01-fe0c-4a0d-ae77-97a4a72851e6'
+```
 |    | Product                 |   total_stock |   total_sales |   avg_sales |   surplus |   gapout |   avg_start |   min_start |   avg_end |   min_end |   avg_stock |   surplus_percentage |   surplus_cogs |   gross_sales |   avg_gross_sales |
 |---:|:------------------------|--------------:|--------------:|------------:|----------:|---------:|------------:|------------:|----------:|----------:|------------:|---------------------:|---------------:|--------------:|------------------:|
 |  0 | Blueberry Oatmeal       |           172 |           153 |           6 |         9 |        1 |          19 |           4 |        13 |         0 |           7 |                    5 |          38.79 |          1987 |                83 |
@@ -388,7 +390,7 @@ root@enayak-final-flask-746c85788d-gmnxh:/app# curl 10.244.10.36:5000/summary?ji
 | 10 | Tuna Salad              |           128 |           105 |           4 |         6 |        0 |          14 |           4 |        10 |         3 |           5 |                    5 |           7.56 |           734 |                31 |
 | 11 | Turkey Sandwich         |           232 |           208 |           9 |         0 |        2 |          18 |           7 |         9 |         0 |           9 |                    0 |           0    |          2494 |               104 |
 | 12 | Vanilla Pudding         |           240 |           208 |           9 |        21 |        0 |          28 |          11 |        19 |         1 |           9 |                    9 |          38.22 |          1870 |                78 |
-```
+
 
 ## Route: /delete
 ```
@@ -399,7 +401,8 @@ Job ec323e01-fe0c-4a0d-ae77-97a4a72851e6 has been deleted
 Check if the job has been deleted
 ```
 root@enayak-final-flask-746c85788d-gmnxh:/app# curl 10.244.10.36:5000/jobs
+```
 |    | End Date   | Job ID                               | Start Date   | Status   | Store   |
 |---:|:-----------|:-------------------------------------|:-------------|:---------|:--------|
 |  0 | 7/10/2020  | 532456f0-a583-49d6-8b38-186d23ba95c6 | 6/17/2020    | complete | South   |
-```
+
