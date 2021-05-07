@@ -20,8 +20,8 @@ spec:
         - name: enayak-final-worker
           imagePullPolicy: Always
           image: eeshanayak/final:latest 
-          #command: ['python', 'worker.py']
-          command: ['sleep', '99999999']
+          command: ['python', 'worker.py']
+          #command: ['sleep', '99999999']
           env:
           - name: WORKER_IP
             valueFrom:
